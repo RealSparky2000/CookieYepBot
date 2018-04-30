@@ -7,6 +7,10 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
+var prefix = '&'
+
+  if(!message.content.startsWith(prefix)) return
+
 client.on('message', message => {
     if (message.content === 'ping') {
     	message.channel.send('PONG!');
