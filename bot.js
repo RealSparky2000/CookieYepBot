@@ -44,7 +44,7 @@ break;
        .setColor(0x${args[1]})
        message.channel.send(embed)
        break;
-    }
+    
  }})
 });
 client.login(process.env.BOT_TOKEN);
