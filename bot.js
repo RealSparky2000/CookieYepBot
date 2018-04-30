@@ -23,5 +23,17 @@ client.on('message', message => {
   	}
 });
 
+client.on('message', message => {
+    if (message.content === 'cookie') {
+    	message.reply('COOOOOOOOOKIES!!!!!!');
+  	}
+});
+
+client.on('message', message => {
+    if (message.content === 'yep') {
+    	message.reply('Yep? Who is CookieYep? Hmmm...');
+  	}
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
