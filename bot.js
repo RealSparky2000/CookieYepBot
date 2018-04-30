@@ -27,11 +27,21 @@ client.on('message', message => {
     if (message.content === prefix+'no') {
         message.reply('Yes..? 8(');
      }
-var embed = new Discord.RichEmbed()
-.setTitle('CookieYep') 
-.setDescription('CookieCookieCookie')
-.setFooter
-.addField
+       case "embed":
+       var embed = new Discord.RichEmbed()
+       .setAuthor('Заголовок с иконкой', client.user.avatarURL)
+       .setTitle('Второй заголовок без иконки')
+       .setDescription('Текст внутри')
+       .setImage(message.author.avatarURL)
+       .setColor(0x${args[1]})
+       message.channel.send(embed)
+       break;
+       
+ }})
+
+
+
+
 
 });   
 client.login(process.env.BOT_TOKEN);
