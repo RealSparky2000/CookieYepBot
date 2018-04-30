@@ -26,8 +26,7 @@ client.on('message', message => {
      }
     if (message.content === prefix+'no') {
         message.reply('Yes..? 8(');
-     }
-
+ 
 });   
 client.login(process.env.BOT_TOKEN);
  
