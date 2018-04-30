@@ -49,17 +49,5 @@ client.on('message', message => {
   	}
 });
 
- case "embed":
-       var embed = new Discord.RichEmbed()
-       .setAuthor('Заголовок с иконкой', client.user.avatarURL)
-       .setTitle('Второй заголовок без иконки')
-       .setDescription('Текст **внутри**')
-       .setImage(message.author.avatarURL)
-       .setColor(`0x${args[1]}`)
-       message.channel.send(embed)
-       break;
-       
- }})
-
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
