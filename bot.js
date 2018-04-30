@@ -26,7 +26,9 @@ client.on('message', message => {
      }
     if (message.content === prefix+'no') {
         message.reply('Yes..? 8(');
- 
+    if (message.content === prefix+'help') {
+        message.reply('**All comands: &yes, &no, &cookie, &yep, &bing, &ping.');
+     }
 });   
 client.login(process.env.BOT_TOKEN);
  
