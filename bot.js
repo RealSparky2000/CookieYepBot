@@ -30,17 +30,22 @@ client.on('message', message => {
     if (message.content === prefix+'help') {
         message.reply('**All comands**: &yes, &no, &cookie, &yep, &bing, &ping.');
      }
-
 switch (args[0].toLowerCase()) {
-            case "randomcolor":
-            var colorE = `0x${getRandomColor().slice(1)}`
-            var info = new Discord.RichEmbed() 
-                 .setAuthor("Рандомный цвет")
-                 .setDescription('** **\n ** **\nHex: `#' + colorE.slice(2) + '`')
-                  .setColor(colorE);
-            message.channel.send(info);
-            break;
-   }
+case "random":
+asdasdasdas
+break;
+}
+       case "embed":
+       var embed = new Discord.RichEmbed()
+       .setAuthor('Заголовок с иконкой', client.user.avatarURL)
+       .setTitle('Второй заголовок без иконки')
+       .setDescription('Текст внутри')
+       .setImage(message.author.avatarURL)
+       .setColor(0x${args[1]})
+       message.channel.send(embed)
+       break;
+       
+ }})
 });
 client.login(process.env.BOT_TOKEN);
  
