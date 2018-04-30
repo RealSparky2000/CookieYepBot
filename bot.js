@@ -58,7 +58,7 @@ client.on('message', message => {
        .setColor(`0x${args[1]}`)
        message.channel.send(embed)
        break;
-       
+    }  
  }};
 
 // THIS  MUST  BE  THIS  WAY
