@@ -49,5 +49,11 @@ client.on('message', message => {
   	}
 });
 
+var embed = new Discord.RichEmbed()
+.setTitle('Your avatar')
+.setDescription
+.setFooter
+.addField
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
