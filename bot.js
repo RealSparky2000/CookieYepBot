@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+var prefix = "&"
+
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -32,6 +34,18 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content === 'yep') {
     	message.reply('Yep? Who is CookieYep? Hmmm...');
+  	}
+});
+
+client.on('message', message => {
+    if (message.content === 'invite') {
+    	message.reply('https://discordapp.com/oauth2/authorize?client_id=440527526746521601&scope=bot&permissions=8');
+  	}
+});
+
+client.on('message', message => {
+    if (message.content === 'yes') {
+    	message.reply('No, suck!');
   	}
 });
 
