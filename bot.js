@@ -27,6 +27,12 @@ client.on('message', message => {
     if (message.content === prefix+'no') {
         message.reply('Yes..? 8(');
      }
+var embed = new Discord.RichEmbed()
+.setTitle('CookieYep') 
+.setDescription('CookieCookieCookie')
+.setFooter
+.addField
+
 });   
 client.login(process.env.BOT_TOKEN);
  
