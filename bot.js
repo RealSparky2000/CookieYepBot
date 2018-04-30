@@ -7,7 +7,19 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {    
+client.on('ready', () => {
+    console.log('I am ready!');
+});
+
+client.on('message', message => {
+    if (message.content === 'ping') {
+    	message.channel.send('PONG!');
+  	}
+});
+
+client.on('message', message => {
+    if (message.content === 'bing') {
+    	message.reply('BONG!');   
     //чтобы бот не реагировал если сообщение не начинается с префикса
   if (!message.content.startsWith(PREFIX) || message.content.startsWith(PREFIX + PREFIX)) return
    var args = message.content.substring(PREFIX.length).split(" ");
