@@ -32,12 +32,10 @@ client.on('message', message => {
                         'I have no idea'
                     ]
                     var fetched = responses[Math.floor(Math.random() * responses.length)];
-                    var embed = new Discord.RichEmbed()
+                    var aembed = new Discord.RichEmbed()
                         .setColor(0xffffff)
                         .setFooter(fetched)
-                    message.channel.send({
-                        embed
-                    });
+                    message.channel.send({aembed});
                     break;
                 case "avatar":
                     var embed = new Discord.RichEmbed()
