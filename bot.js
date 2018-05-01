@@ -28,7 +28,7 @@ client.on('message', message => {
         message.reply('Yes..? 8(');
      }
     if (message.content === prefix+'help') {
-        message.reply('**All comands**: &yes, &no, &cookie, &yep, &bing, &ping.');
+        message.reply('**All comands**: &yes, &no, &cookie, &yep, &bing, &ping, &embed');
      }
     if (message.content === prefix+'embed') {
         var embed = new Discord.RichEmbed()
