@@ -6,7 +6,7 @@ client.on('ready', () => {
 var prefix = '&'
 client.on('message', message => {
     var args = message.content.substring(prefix.length).split(" ");
-    if(!message.content.startsWith(prefix)) return;
+    if(!message.content.startsWith(prefix)) return
     switch(args[0]) {
         case "ping":
         message.channel.send('PONG!');
@@ -14,7 +14,7 @@ client.on('message', message => {
         default:
         message.channel.send('Command not found.');
         break;
-    }
+        }
     if (message.content === prefix+'bing') {
         message.reply('BONG!');
       }
