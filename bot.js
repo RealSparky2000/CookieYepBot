@@ -39,8 +39,8 @@ client.on('message', message => {
     if (message.content === prefix+'embed') {
         var embed = new Discord.RichEmbed()
             .setAuthor('CookieYep', client.user.avatarURL)
-            .setTitle('Avatar URL link')
-            .setDescription('Avatar')
+            .setTitle('The cookie steals avatars')
+            .setDescription('Avatar URL link')
             .setImage(message.author.avatarURL)
             .setColor("#ffcc00")
             message.channel.send({embed});
