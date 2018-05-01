@@ -76,24 +76,16 @@ client.on('message', message => {
                         .setTitle(`${infouser.username}#${infouser.discriminator}`)
                         .addField("ID:", `${infouser.id}`, true)
                         .addField("Nickname:", `${infomember.nickname !== null ? `${infomember.nickname}` : 'None'}`, true)
-            .addField("Bot:", `${infouser.bot}`, true)
-            .addField("Status:", `${infouser.presence.status}`, true)
-            .addField("Game:", `${infouser.presence.game ? infouser.presence.game.name : 'None'}`, true)
-            .addField("Roles:", infomember.roles.map(roles => `${roles.name}`).join(', '), true)
-            .setFooter(`Replying to ${message.author.username}#${message.author.discriminator}`)
-        message.channel.send({infoembed});
-        break;
-        default:
-        break;
+                        .addField("Bot:", `${infouser.bot}`, true)
+                        .addField("Status:", `${infouser.presence.status}`, true)
+                        .addField("Game:", `${infouser.presence.game ? infouser.presence.game.name : 'None'}`, true)
+                        .addField("Roles:", infomember.roles.map(roles => `${roles.name}`).join(', '), true)
+                        .setFooter(`Replying to ${message.author.username}#${message.author.discriminator}`)
+                    message.channel.send({infoembed});
+                    break;
+            default:
+                break;
     }
-    if (args[0].toLowerCase=="help") {
-        if(args[1]==="avatar") {
-            message.channel.send('Displays your pfp.');
-        }
-        else {
-            message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar, 8ball');
-        }
-     }
 
 });
 client.login(process.env.BOT_TOKEN);
