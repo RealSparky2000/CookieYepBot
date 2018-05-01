@@ -7,7 +7,7 @@ var prefix = '&'
 client.on('message', message => {
     var args = message.content.substring(prefix.length).split(" ");
     if(!message.content.startsWith(prefix)) return;
-    switch(args[1]) {
+    switch(args[0]) {
         case "ping":
         message.channel.send('PONG!');
         break;
