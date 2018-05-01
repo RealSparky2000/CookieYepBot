@@ -28,8 +28,8 @@ client.on('message', message => {
     if (message.content === prefix+'no') {
         message.reply('Yes..? 8(');
      }
-    if (message.content === prefix+'help') {
-        if(args[2]==="embed") {
+    if (args[0]==="help") {
+        if(args[1]==="embed") {
             message.reply('Displays a test embed.');
         }
         else {
