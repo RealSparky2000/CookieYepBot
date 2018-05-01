@@ -28,8 +28,8 @@ client.on('message', message => {
     if (message.content === prefix+'no') {
         message.reply('Yes..? 8(');
      }
-    if (args[0]==="help") {
-        if(args[1]==="embed") {
+    if (message.content === prefix+'help') {
+        if(args[2]==="embed") {
             message.reply('Displays a test embed.');
         }
         else {
@@ -38,9 +38,9 @@ client.on('message', message => {
      }
     if (message.content === prefix+'embed') {
         var embed = new Discord.RichEmbed()
-            .setAuthor('Заголовок с иконкой', client.user.avatarURL)
-            .setTitle('Второй заголовок без иконки')
-            .setDescription('Текст внутри')
+            .setAuthor('CookieYep', client.user.avatarURL)
+            .setTitle('Avatar URL link')
+            .setDescription('Avatar')
             .setImage(message.author.avatarURL)
             .setColor("#888888")
             message.channel.send({embed});
