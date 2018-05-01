@@ -31,10 +31,7 @@ client.on('message', message => {
         message.reply('**All comands**: &yes, &no, &cookie, &yep, &bing, &ping.');
      }
     switch(args[0].toLowerCase()) {
-case "embed":
-asdasdasdas
-break;
-       
+
        case "embed":
        var embed = new Discord.RichEmbed()
        .setAuthor('Заголовок с иконкой', client.user.avatarURL)
