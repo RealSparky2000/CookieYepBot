@@ -12,7 +12,6 @@ client.on('message', message => {
         message.channel.send('PONG!');
         break;
         default:
-        message.channel.send('Command not found.');
         break;
         }
     if (message.content === prefix+'bing') {
