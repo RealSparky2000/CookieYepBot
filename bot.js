@@ -39,8 +39,7 @@ client.on('message', message => {
      }
     if (message.content === prefix+'help') {
         if(args[2]==="embed") {
-            
-            
+     }             
         message.reply('**All comands**: &yes, &no, &cookie, &yep, &bing, &ping, &embed');
      }
     if (message.content === prefix+'embed') {
