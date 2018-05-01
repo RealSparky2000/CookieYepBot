@@ -42,7 +42,7 @@ client.on('message', message => {
             .setTitle('Avatar URL link')
             .setDescription('Avatar')
             .setImage(message.author.avatarURL)
-            .setColor("#888888")
+            .setColor("#ffcc00")
             message.channel.send({embed});
     }
 });
