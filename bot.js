@@ -32,7 +32,7 @@ client.on('message', message => {
         'I have no idea'
         ]
         var fetched = responses[Math.floor(Math.random() * responses.length)];
-        const embed = new Discord.RichEmbed()
+        var embed = new Discord.RichEmbed()
             .setColor(0xffffff)
             .setFooter(fetched);
         message.channel.send(embed);
