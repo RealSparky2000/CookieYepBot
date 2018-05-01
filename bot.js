@@ -48,7 +48,7 @@ client.on('message', message => {
             message.channel.send('Displays your pfp.');
         }
         else {
-            message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar');
+            message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar, 8ball');
         }
      }
     if (args[0]==='avatar') {
