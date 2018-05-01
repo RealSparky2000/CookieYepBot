@@ -28,8 +28,8 @@ client.on('message', message => {
     if (message.content === prefix+'no') {
         message.reply('Yes..? 8(');
      }
-    if (message.content === prefix+'help') {
-        if(args[2]==="avatar") {
+    if (args[0]==="help") {
+        if(args[1]==="avatar") {
             message.reply('Displays your pfp.');
         }
         else {
