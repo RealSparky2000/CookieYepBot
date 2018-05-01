@@ -37,7 +37,7 @@ client.on('message', message => {
             .setDescription('Текст внутри')
             .setImage(message.author.avatarURL)
             .setColor("#888888")
-            message.channel.send(embed)
+            message.channel.send({embed});
     }
 });
 client.login(process.env.BOT_TOKEN);
