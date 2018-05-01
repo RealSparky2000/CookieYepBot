@@ -34,8 +34,8 @@ client.on('message', message => {
         var fetched = responses[Math.floor(Math.random() * responses.length)];
         var embed = new Discord.RichEmbed()
             .setColor(0xffffff)
-            .setFooter(fetched);
-        message.channel.send(embed);
+            .setFooter(fetched)
+        message.channel.send({embed});
         break;
         case "avatar":
         var embed = new Discord.RichEmbed()
@@ -49,7 +49,7 @@ client.on('message', message => {
         default:
         break;
     }
-    if (args[0].toLowerCase==="help") {
+    if (args[0].toLowerCase=="help") {
         if(args[1]==="avatar") {
             message.channel.send('Displays your pfp.');
         }
