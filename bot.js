@@ -66,10 +66,9 @@ client.on('message', message => {
             message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar, 8ball');
         }
      }
-   
+
     const Discord = require('discord.js');
 
-//Define moment
 const moment = require("moment");
 
 exports.run = async (client, message, args) => {
@@ -80,10 +79,8 @@ exports.run = async (client, message, args) => {
     } else {
         user = message.author;
     }
-	// Define the member of a guild.
     const member = message.guild.member(user);
-	
-	//Discord rich embed
+
     const embed = new Discord.RichEmbed()
 		.setColor('RANDOM')
 		.setThumbnail(user.avatarURL)
