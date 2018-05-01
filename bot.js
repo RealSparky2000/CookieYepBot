@@ -35,7 +35,7 @@ case "embed":
 asdasdasdas
 break;
        
-            case "embed":
+       case "embed":
        var embed = new Discord.RichEmbed()
        .setAuthor('Заголовок с иконкой', client.user.avatarURL)
        .setTitle('Второй заголовок без иконки')
