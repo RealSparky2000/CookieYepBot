@@ -29,18 +29,18 @@ client.on('message', message => {
         message.reply('Yes..? 8(');
      }
     if (message.content === prefix+'help') {
-        if(args[2]==="embed") {
-            message.reply('Displays a test embed.');
+        if(args[2]==="avatar") {
+            message.reply('Displays your pfp.');
         }
         else {
             message.reply('**All comands**: &yes, &no, &cookie, &yep, &bing, &ping, &embed');
         }
      }
-    if (message.content === prefix+'embed') {
+    if (message.content === prefix+'avatar') {
         var embed = new Discord.RichEmbed()
             .setAuthor('CookieYep', client.user.avatarURL)
             .setTitle('The cookie steals avatars')
-            .setDescription('Avatar URL link')
+            .setDescription('[Avatar Link](' + message.author.avatarURL + ')')
             .setImage(message.author.avatarURL)
             .setColor("#ffcc00")
             message.channel.send({embed});
