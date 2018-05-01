@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const moment = require("moment");
 const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
@@ -71,7 +70,7 @@ client.on('message', message => {
                     var infomember = message.guild.member(user);
 
                     var infoembed = new Discord.RichEmbed()
-                        .setColor('RANDOM')
+                        .setColor('#222222')
                         .setThumbnail(user.avatarURL)
                         .setTitle(`${infouser.username}#${infouser.discriminator}`)
                         .addField("ID:", `${infouser.id}`, true)
