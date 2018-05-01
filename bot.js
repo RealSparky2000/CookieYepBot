@@ -3,16 +3,6 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
 });
-var responses = [
-        'Agreed!',
-        'Of Course!',
-        'Nope.',
-        'No',
-        'Maybe',
-        'One day...',
-        'Don\'t see that happening!',
-        'I have no idea'
-    ]
 var prefix = '&'
 client.on('message', message => {
     var args = message.content.substring(prefix.length).split(" ");
@@ -60,5 +50,24 @@ client.on('message', message => {
             .setColor("#ffcc00")
             message.channel.send({embed});
     }
+case "8ball":
+var responses = [
+        'Agreed!',
+        'Of Course!',
+        'Nope.',
+        'No',
+        'Maybe',
+        'One day...',
+        'Don\'t see that happening!',
+        'I have no idea'
+    ]
+   
+    var fetched = responses[Math.floor(Math.random() * responses.length)];
+
+    const embed = new Discord.MessageEmbed()
+        .setColor(0xffffff)
+        .setFooter(fetched);
+    message.channel.send(embed);
+break;
 });
 client.login(process.env.BOT_TOKEN);
