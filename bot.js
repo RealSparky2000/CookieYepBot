@@ -46,6 +46,15 @@ client.on('message', message => {
             .setColor("#ffcc00")
             message.channel.send({embed});
         break;
+        case "help":
+        switch(args[1]) {
+            case "avatar":
+            message.channel.send('Displays your pfp.');
+            break;
+            default:
+            message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar, 8ball');
+            break;
+        }
         default:
         break;
     }
