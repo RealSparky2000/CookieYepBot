@@ -31,7 +31,6 @@ client.on('message', message => {
         'Don\'t see that happening!',
         'I have no idea'
         ]
-        var fetched = responses[Math.floor(Math.random() * responses.length)];
         var embed = new Discord.RichEmbed()
             .setColor(0xffffff)
             .setFooter(fetched)
@@ -96,6 +95,7 @@ exports.run = async (client, message, args) => {
 		.setFooter(`Replying to ${message.author.username}#${message.author.discriminator}`)
      message.channel.send({embed});
     }
-};
+        var fetched = responses[Math.floor(Math.random() * responses.length)];
+ррпанр
 });
 client.login(process.env.BOT_TOKEN);
