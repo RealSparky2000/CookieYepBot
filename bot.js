@@ -3,6 +3,16 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
 });
+var responses = [
+        'Agreed!',
+        'Of Course!',
+        'Nope.',
+        'No',
+        'Maybe',
+        'One day...',
+        'Don\'t see that happening!',
+        'I have no idea'
+    ]
 var prefix = '&'
 client.on('message', message => {
     var args = message.content.substring(prefix.length).split(" ");
@@ -19,6 +29,16 @@ client.on('message', message => {
         break;
         case "cookie":
         message.reply('COOOOOKIESS!!!!');
+        break;
+        case "8ball":
+        // Fetch a random item from the array
+        var fetched = responses[Math.round(Math.random() * responses.length)];
+        // Form Embed
+        var ballembed = new Discord.MessageEmbed()
+            .setColor(0xffffff)
+            .setFooter(fetched)
+        // Send Embed
+        message.channel.send(ballembed);
         break;
         default:
         break;
