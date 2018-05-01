@@ -9,29 +9,20 @@ client.on('message', message => {
     if(!message.content.startsWith(prefix)) return
     switch(args[0]) {
         case "ping":
-        message.channel.send('PONG!');
+        message.reply('PONG!');
         break;
         case "bing":
-        message.channel.send('BONG!');
+        message.reply('BONG!');
+        break;
+        case "how are you":
+        message.reply('Nice!');
+        break;
+        case "cookie":
+        message.reply('COOOOOKIESS!!!!');
         break;
         default:
         break;
     }
-    if (message.content === prefix+'how are you') {
-        message.reply('NICE!');
-     }
-    if (message.content === prefix+'yep') {
-        message.reply('Yep? Who is CookieYep? Hm...');
-     }
-    if (message.content === prefix+'cookie') {
-        message.reply('COOOOOKIESS!!!!');
-     }
-    if (message.content === prefix+'yes') {
-        message.reply('No, suck!');
-     }
-    if (message.content === prefix+'no') {
-        message.reply('Yes..? 8(');
-     }
     if (args[0]==="help") {
         if(args[1]==="avatar") {
             message.reply('Displays your pfp.');
