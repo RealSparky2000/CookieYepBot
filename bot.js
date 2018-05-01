@@ -59,6 +59,7 @@ client.on('message', message => {
                             message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar, 8ball');
                             break;
                     }
+                    break;
                 case "info":
                     var user;
                     // If the user mentions someone, display their stats. If they just run userinfo without mentions, it will show their own stats.
