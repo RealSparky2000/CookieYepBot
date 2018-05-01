@@ -67,7 +67,7 @@ client.on('message', message => {
         }
      }
 
-    const Discord = require('discord.js');
+const Discord = require('discord.js');
 
 const moment = require("moment");
 
