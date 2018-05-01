@@ -9,11 +9,11 @@ client.on('message', message => {
     if(!message.content.startsWith(prefix)) return
     switch(args[0]) {
         case "ping":
-        message.channel.send('PONG!');
-        break;
+            message.channel.send('PONG!');
+            break;
         default:
-        break;
-        }
+            break;
+    }
     if (message.content === prefix+'bing') {
         message.reply('BONG!');
       }
