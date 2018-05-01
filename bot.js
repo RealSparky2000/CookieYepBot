@@ -31,7 +31,7 @@ client.on('message', message => {
         message.reply('**All comands**: &yes, &no, &cookie, &yep, &bing, &ping.');
      }
     switch(args[0].toLowerCase()) {
-case "cookieyep":
+case "embed":
 asdasdasdas
 break;
 }
