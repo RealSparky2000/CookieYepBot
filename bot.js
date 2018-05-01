@@ -6,19 +6,10 @@ client.on('ready', () => {
 var prefix = '&'
 client.on('message', message => {
     var args = message.content.substring(prefix.length).split(" ");
-    if(message.content.startsWith(prefix)) {
-        switch(args[0]) {
-        case "ping":
-            message.channel.send('PONG!');
-            break;
-        default:
-            break;
-        }
-    }
-    else {
-        break;
-    }
-    
+    if(!message.content.startsWith(prefix)) return
+    if (message.content === prefix+'ping') {
+        message.channel.send('PONG!');
+      }
     if (message.content === prefix+'bing') {
         message.reply('BONG!');
       }
@@ -39,7 +30,8 @@ client.on('message', message => {
      }
     if (message.content === prefix+'help') {
         if(args[2]==="embed") {
-     }             
+            
+            
         message.reply('**All comands**: &yes, &no, &cookie, &yep, &bing, &ping, &embed');
      }
     if (message.content === prefix+'embed') {
@@ -53,4 +45,3 @@ client.on('message', message => {
     }
 });
 client.login(process.env.BOT_TOKEN);
- 
