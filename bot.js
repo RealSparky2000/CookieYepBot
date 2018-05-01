@@ -5,6 +5,7 @@ client.on('ready', () => {
 });
 var prefix = '&'
 client.on('message', message => {
+    var args = message.content.substring(prefix.length).split(" ");
     if(!message.content.startsWith(prefix)) return
     if (message.content === prefix+'ping') {
         message.channel.send('PONG!');
