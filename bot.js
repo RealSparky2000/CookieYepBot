@@ -30,19 +30,15 @@ client.on('message', message => {
     if (message.content === prefix+'help') {
         message.reply('**All comands**: &yes, &no, &cookie, &yep, &bing, &ping.');
      }
-    switch(args[0].toLowerCase()) {
-
-       case "embed":
-       var embed = new Discord.RichEmbed()
-       .setAuthor('Заголовок с иконкой', client.user.avatarURL)
-       .setTitle('Второй заголовок без иконки')
-       .setDescription('Текст внутри')
-       .setImage(message.author.avatarURL)
-       .setColor(0x${args[1]})
-       message.channel.send(embed)
-       break;
-}       
- }})
+    if (message.content === prefix+'embed') {
+        var embed = new Discord.RichEmbed()
+            .setAuthor('Заголовок с иконкой', client.user.avatarURL)
+            .setTitle('Второй заголовок без иконки')
+            .setDescription('Текст внутри')
+            .setImage(message.author.avatarURL)
+            .setColor("#888888")
+        message.channel.send(embed)
+    }
 });
 client.login(process.env.BOT_TOKEN);
  
