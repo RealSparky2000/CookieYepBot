@@ -15,6 +15,9 @@ client.on('message', message => {
             break;
         }
     }
+    else {
+        break;
+    }
     
     if (message.content === prefix+'bing') {
         message.reply('BONG!');
