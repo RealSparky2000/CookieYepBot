@@ -20,6 +20,23 @@ client.on('message', message => {
         case "cookie":
         message.reply('COOOOOKIESS!!!!');
         break;
+        case "8ball":
+        var responses = [
+        'Agreed!',
+        'Of Course!',
+        'Nope.',
+        'No',
+        'Maybe',
+        'One day...',
+        'Don\'t see that happening!',
+        'I have no idea'
+        ]
+        var fetched = responses[Math.floor(Math.random() * responses.length)];
+        const embed = new Discord.RichEmbed()
+            .setColor(0xffffff)
+            .setFooter(fetched);
+        message.channel.send(embed);
+        break;
         default:
         break;
     }
@@ -28,7 +45,7 @@ client.on('message', message => {
             message.channel.send('Displays your pfp.');
         }
         else {
-            message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar');
+            message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar, 8ball');
         }
      }
     if (args[0]==='avatar') {
@@ -40,5 +57,24 @@ client.on('message', message => {
             .setColor("#ffcc00")
             message.channel.send({embed});
     }
+case "8ball":
+var responses = [
+        'Agreed!',
+        'Of Course!',
+        'Nope.',
+        'No',
+        'Maybe',
+        'One day...',
+        'Don\'t see that happening!',
+        'I have no idea'
+    ]
+   
+    var fetched = responses[Math.floor(Math.random() * responses.length)];
+
+    const embed = new Discord.MessageEmbed()
+        .setColor(0xffffff)
+        .setFooter(fetched);
+    message.channel.send(embed);
+break;
 });
 client.login(process.env.BOT_TOKEN);
