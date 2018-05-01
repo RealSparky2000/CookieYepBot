@@ -34,7 +34,6 @@ client.on('message', message => {
 case "embed":
 asdasdasdas
 break;
-
        case "embed":
        var embed = new Discord.RichEmbed()
        .setAuthor('Заголовок с иконкой', client.user.avatarURL)
