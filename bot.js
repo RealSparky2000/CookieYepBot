@@ -25,13 +25,13 @@ client.on('message', message => {
     }
     if (args[0]==="help") {
         if(args[1]==="avatar") {
-            message.reply('Displays your pfp.');
+            message.channel.send('Displays your pfp.');
         }
         else {
-            message.reply('**All comands**: &cookie, &bing, &ping, &avatar');
+            message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar');
         }
      }
-    if (message.content === prefix+'avatar') {
+    if (args[0]==='avatar') {
         var embed = new Discord.RichEmbed()
             .setAuthor('CookieYep', client.user.avatarURL)
             .setTitle('The cookie steals avatars')
