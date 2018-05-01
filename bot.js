@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
-    bot.user.setGame('playing with cookies'); 
+    bot.user.setGame('cookies'); 
 });
 var prefix = '&'
 client.on('message', message => {
