@@ -33,7 +33,7 @@ client.on('message', message => {
             message.reply('Displays your pfp.');
         }
         else {
-            message.reply('**All comands**: &yes, &no, &cookie, &yep, &bing, &ping, &embed');
+            message.reply('**All comands**: &yes, &no, &cookie, &yep, &bing, &ping, &avatar');
         }
      }
     if (message.content === prefix+'avatar') {
