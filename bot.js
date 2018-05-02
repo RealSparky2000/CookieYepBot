@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.on('ready', () => {
-bot.user.setStatus('Online')
-bot.user.setGame('cookies')
+client.user.setPresence({ status: 'online', game: { name:'cookies'} }) 
     console.log('I am ready!');
 });
 var prefix = '&'
