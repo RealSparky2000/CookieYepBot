@@ -33,7 +33,7 @@ client.on('message', message => {
         ]
         var fetched = responses[Math.floor(Math.random() * responses.length)];
         var embed = new Discord.RichEmbed()
-            .setColor(0xffffff)
+            .setColor(0x00FFFF)
             .setFooter(fetched)
         message.channel.send({embed});
         break;
@@ -43,7 +43,7 @@ client.on('message', message => {
             .setTitle('The cookie steals avatars')
             .setDescription('[Avatar Link](' + message.author.avatarURL + ')')
             .setImage(message.author.avatarURL)
-            .setColor("#ffcc00")
+            .setColor("0x00FFFF")
             message.channel.send({embed});
         break;
         case "infp":
@@ -51,7 +51,7 @@ client.on('message', message => {
             .setAuthor(message.author.username, message.author.avatarURL()) //Heading With Username & Their Avatar 
             .setTitle('UserInfo')
             .setURL('www.google.com') //Any Vaild Link
-            .setColor('#ffcc00') //You Can Use HexColour Ex:- #000000
+            .setColor('#0x00FFFF') //You Can Use HexColour Ex:- #000000
             .setImage(message.author.avatarURL()) //Add Any Image URl || Image
             .setThumbnail(message.author.avatarURL()) //Add Any Image URl || ThumbNail
             .addField('Avatar', message.author.avatar, true) //The ID of the user's avatar //Inline True or false
