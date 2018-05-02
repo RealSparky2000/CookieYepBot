@@ -55,7 +55,6 @@ client.on('message', message => {
         }
         else {
             message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar, 8ball');
-        break;
         }
      }
     
