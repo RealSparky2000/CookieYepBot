@@ -33,7 +33,7 @@ client.on('message', message => {
         ]
         var fetched = responses[Math.floor(Math.random() * responses.length)];
         var embed = new Discord.RichEmbed()
-            .setColor(#ffcc00)
+            .setColor(0xffffff)
             .setFooter(fetched)
         message.channel.send({embed});
         break;
