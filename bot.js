@@ -22,7 +22,7 @@ client.on('message', message => {
         break;
         case "8ball":
         var responses = [
-        'Agreed!',
+        ' :8ball:| Agreed!',
         'Of Course!',
         'Disagree.',
         'No',
