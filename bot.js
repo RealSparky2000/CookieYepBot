@@ -30,11 +30,11 @@ client.on('message', message => {
                         'One day...',
                         'Don\'t see that happening!',
                         'I have no idea'
-                    }
+                    ]
                     var fetched = responses[Math.floor(Math.random() * responses.length)];
                     var embed8 = new Discord.RichEmbed()
-                        .setColor(0xffffff)
-                        .setFooter(fetched)
+                        .setColor("#ffcc00")
+                        .setFooter("fetched")
                     message.channel.send({embed8});
                     break;
                 case "avatar":
