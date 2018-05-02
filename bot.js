@@ -57,9 +57,6 @@ client.on('message', message => {
             message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar, 8ball');
         }
      }
-
-client.on("guildMemberAdd", function(member) {
-    let role = member.guild.roles.find("name", "Member");
-    member.addRole(role).catch(console.error);    
+    
 });
 client.login(process.env.BOT_TOKEN);
