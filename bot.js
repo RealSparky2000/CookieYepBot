@@ -7,7 +7,7 @@ var prefix = '&'
 client.on('message', message => {
     var args = message.content.substring(prefix.length).split(" ");
     if(!message.content.startsWith(prefix)) return
-    switch(args[0]) {
+    switch(args[0].toLowerCase()) {
         case "ping":
         message.reply('PONG!');
         break;
@@ -37,18 +37,7 @@ client.on('message', message => {
             .setFooter(fetched);
         message.channel.send(embed);
         break;
-        default:
-        break;
-    }
-    if (args[0]==="help") {
-        if(args[1]==="avatar") {
-            message.channel.send('Displays your pfp.');
-        }
-        else {
-            message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar, 8ball');
-        }
-     }
-    if (args[0]==='avatar') {
+        case "avatar":
         var embed = new Discord.RichEmbed()
             .setAuthor('CookieYep', client.user.avatarURL)
             .setTitle('The cookie steals avatars')
@@ -56,25 +45,18 @@ client.on('message', message => {
             .setImage(message.author.avatarURL)
             .setColor("#ffcc00")
             message.channel.send({embed});
+        break;
+        default:
+        break;
     }
-case "8ball":
-var responses = [
-        'Agreed!',
-        'Of Course!',
-        'Nope.',
-        'No',
-        'Maybe',
-        'One day...',
-        'Don\'t see that happening!',
-        'I have no idea'
-    ]
-   
-    var fetched = responses[Math.floor(Math.random() * responses.length)];
-
-    const embed = new Discord.MessageEmbed()
-        .setColor(0xffffff)
-        .setFooter(fetched);
-    message.channel.send(embed);
-break;
+    if (args[0].toLowerCase==="help") {
+        if(args[1]==="avatar") {
+            message.channel.send('Displays your pfp.');
+        }
+        else {
+            message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar, 8ball');
+        }
+     }
+    
 });
 client.login(process.env.BOT_TOKEN);
