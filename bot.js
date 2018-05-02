@@ -5,6 +5,7 @@ client.on('ready', () => {
      bot.user.setPresence({ game: { name: 'cookieyeping', type: 0 } });
 });
 var prefix = '&'
+
 client.on('message', message => {
             var args = message.content.substring(prefix.length).split(" ");
             if (!message.content.startsWith(prefix)) return
@@ -15,7 +16,7 @@ client.on('message', message => {
                 case "bing":
                     message.reply('BONG!');
                     break;
-                case "how are you":
+                case "how-are-you":
                     message.reply('Nice!');
                     break;
                 case "cookie":
