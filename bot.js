@@ -33,7 +33,7 @@ client.on('message', message => {
         ]
         var fetched = responses[Math.floor(Math.random() * responses.length)];
         var embed = new Discord.RichEmbed()
-            .setColor(0xffffff)
+            .setColor(#ffcc00)
             .setFooter(fetched)
         message.channel.send({embed});
         break;
@@ -46,7 +46,7 @@ client.on('message', message => {
             .setColor("#ffcc00")
             message.channel.send({embed});
         break;
-        case "infp":
+        case "info":
         let UserInfo = new Discord.MessageEmbed()
             .setAuthor(message.author.username, message.author.avatarURL()) //Heading With Username & Their Avatar 
             .setTitle('UserInfo')
