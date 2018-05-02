@@ -46,7 +46,7 @@ client.on('message', message => {
             .setColor("#ffcc00")
             message.channel.send({embed});
         break;
-        case "info":
+        case "UserInfo":
         let UserInfo = new Discord.MessageEmbed()
             .setAuthor(message.author.username, message.author.avatarURL()) //Heading With Username & Their Avatar 
             .setTitle('UserInfo')
