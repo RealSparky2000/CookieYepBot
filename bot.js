@@ -46,28 +46,8 @@ client.on('message', message => {
             .setColor("#ffcc00")
             message.channel.send({embed});
         break;
-        default:
-        break;
-    }
-    if (args[0].toLowerCase=="help") {
-        if(args[1]==="avatar") {
-            message.channel.send('Displays your pfp.');
-        }
-        else {
-            message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar, 8ball');
-        }
-     }
-    
-const Discord = require('discord.js'); // To Install Discord.js | Run This Command in Console/Terminal `npm install --save discordjs/discord.js`
-const client = new Discord.Client();
-
-let PREFIX = '&' //Prefix Can Be Any 
-
-client.on('message', message => { //Message Event | Listener
-
-    if (message.content.startsWith(PREFIX + 'Userinfo')) {
-
-        const UserInfo = new Discord.MessageEmbed()
+        case "info":
+        let UserInfo = new Discord.MessageEmbed()
 
             //All Fields are Optional Pick Any some
 
@@ -105,7 +85,19 @@ client.on('message', message => { //Message Event | Listener
             .setTimestamp() //The timestamp of this embed
 
         message.channel.send(UserInfo);
+        break;
+        case "help":
+            switch(args[1]) {
+                case "avatar":
+                message.channel.send('Displays your pfp.');
+                break;
+                default:
+                message.channel.send('**All comands**: &cookie, &bing, &ping, &avatar, 8ball');
+                break;
+            }
+            break;
+        default:
+        break;
     }
-    
 });
 client.login(process.env.BOT_TOKEN);
