@@ -106,8 +106,6 @@ client.on('message', message => { //Message Event | Listener
 
         message.channel.send(UserInfo);
     }
-});
-
-client.login('YOUR TOKEN HERE');
+    
 });
 client.login(process.env.BOT_TOKEN);
