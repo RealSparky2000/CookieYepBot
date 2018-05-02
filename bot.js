@@ -92,6 +92,5 @@ client.on('message', message => {
         default:
         break;
     }
-
 });
 client.login(process.env.BOT_TOKEN);
