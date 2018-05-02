@@ -33,8 +33,8 @@ client.on('message', message => {
                     ]
                     var fetched = responses[Math.floor(Math.random() * responses.length)];
                     var embed8 = new Discord.RichEmbed()
-                        .setColor(#ffcc00)
-                        .setFooter(fetched)
+                        .setColor("#ffcc00")
+                        .setFooter("fetched")
                     message.channel.send({embed8});
                     break;
                 case "avatar":
