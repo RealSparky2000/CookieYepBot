@@ -24,12 +24,12 @@ client.on('message', message => {
         var responses = [
         'Agreed!',
         'Of Course!',
-        'Nope.',
+        'Disagree.',
         'No',
         'Maybe',
-        'One day...',
-        'Don\'t see that happening!',
-        'I have no idea'
+        'Really?',
+        'Cannot predict now.',
+        'Dont decided on this!'
         ]
         var fetched = responses[Math.floor(Math.random() * responses.length)];
         var embed = new Discord.RichEmbed()
