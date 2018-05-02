@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.on('ready', () => {
-bot.user.setStatus("cookies")
+client.user setActivity("cookies with realsparky", {"type" : "PLAYING"})
     console.log('I am ready!');
 });
 var prefix = '&'
